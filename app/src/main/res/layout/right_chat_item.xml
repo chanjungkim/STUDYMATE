@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/group_chat_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:hint="닉네임"
+            android:textColor="#960d0d"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+        <!--android:visibility="gone"-->
+        <!--android:layout_gravity="end"-->
+
+        <TextView
+            android:id="@+id/group_chat_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/chat_image1"
+            android:textSize="15dp" />
+        <!--android:layout_gravity="end"-->
+
+        <ImageView
+            android:id="@+id/group_chat_image_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+        <!--android:layout_gravity="end"-->
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/group_chat_image_talk"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_gravity="end"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--/>-->
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/group_chat_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:scaleType="fitXY"
+        android:src="@drawable/camera"
+        android:visibility="gone" />
+</LinearLayout>
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:id="@+id/group_layout"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:orientation="horizontal"--><!--&gt;-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:orientation="vertical">-->
+
+    <!--<TextView--><!--android:id="@+id/group_chat_context"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:hint="대화내용"--><!--android:textSize="15dp"--><!--android:gravity="end"--><!--/>-->
+
+    <!--</LinearLayout>--><!--</LinearLayout>-->

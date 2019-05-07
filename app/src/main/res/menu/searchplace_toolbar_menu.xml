@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/ic_map_black_24dp"
+        app:showAsAction="ifRoom"
+        android:title="지도로 스터디장소검색">
+    </item>
+</menu>
+
+    <!--showAsAction 툴바에 표시할 것인지에 관한 속성이다.-->
+    <!-- - never     표시하지 않는다.-->
+    <!-- - ifRoom   표시할수 있는 공간이 존재하면 표시한다.-->
+    <!-- - withText  메뉴의 아이콘과 텍스트를 함께 표시한다.-->
+    <!-- - always    항상 표시한다.-->
+
+    <!--title 아이콘을 길게 클릭했을 때 풍선말로 표시할 내용-->

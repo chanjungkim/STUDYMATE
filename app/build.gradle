@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+        jni.srcDirs = [] //disable automatic ndk-build call
+    }
+
+
+
+    defaultConfig {
+        applicationId "com.example.gp62.studymate"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
+        }
+    }
+
+}
+
+// Error:Execution failed for task ':app:preDebugAndroidTestBuild'.> Conflict with dependency 'com.android.support:support-annotations' in project ':app'. Resolved versions for app (26.1.0) and test app (27.1.1) differ. See https://d.android.com/r/tools/test-apk-dependency-conflicts.html for details.
+// 위의 에러가 뜨면 아래 코드 추가
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-annotations:26.1.0'
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:27.1.1'
+    //implementation  'com.android.support:exifinterface:27.1.0'
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    implementation 'com.android.volley:volley:1.0.0'
+    // 네트워크연결 라이브러리
+    //   compile 'com.google.android.gms:play-services-maps:8.4.0' // 구글맵 사용하기
+    //    compile 'com.google.android.gms:play-services-maps:15.0.1'
+    //    compile 'com.google.android.gms:play-services-places:15.0.1'
+    //    compile 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+    implementation 'noman.placesapi:placesAPI:1.1.3'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation files('libs/libDaumMapAndroid.jar')
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'xyz.dev_juyoung:cropicker:1.0.3'
+    // 다중이미지
+    //compile 'com.loopj.android:android-async-http:1.4.9' // 다중이미지 업로드 라이브러리
+    //compile 'com.google.firebase:firebase-messaging:12.0.1'// 파이어베이스 메세지
+    //noinspection GradleCompatible,GradleCompatible
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.3.0'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    //영상통화
+    implementation files('libs/audio_device_java.jar')
+    implementation files('libs/autobanh.jar')
+    implementation files('libs/base_java.jar')
+    implementation files('libs/libjingle_peerconnection.jar')
+    implementation project(':openCVLibrary343')
+    implementation 'org.jetbrains:annotations-java5:15.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

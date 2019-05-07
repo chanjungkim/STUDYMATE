@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <!--card_view:cardCornerRadius="5dp"-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_layout"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/my_group_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/camera"
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/my_group_cate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="어학"
+            android:textColor="#960d0d"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/my_group_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="영어회화스터디모집"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/my_group_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="함께 공부해요~"
+            android:textSize="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_group_region"
+                android:hint="서울"
+                android:textSize="13dp"
+                android:paddingRight="20dp"/>
+
+            <TextView
+                android:id="@+id/my_group_cur_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:hint="1"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="/"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/my_group_max_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="5"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+</android.support.v7.widget.CardView>

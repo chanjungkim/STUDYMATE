@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <!--런치메이트 로고-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo_back"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:padding="20dp"
+        android:text="STUDYMATE"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+    <!--android:src="@drawable/lunchlogo"-->
+
+    <!--이메일-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/emailText_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이메일"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!--비밀번호-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/passText_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!--로그인버튼-->
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textColor="#ffffff"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <!--아이디/비밀번호 찾기-->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="30dp"
+        android:text="아이디/비밀번호 찾기" />
+
+    <Button
+        android:backgroundTint="#fdda3a"
+        android:id="@+id/kakao_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카카오톡으로 시작하기" />
+
+    <Button
+        android:backgroundTint="#c65823"
+        android:id="@+id/google_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="구글로 시작하기" />
+
+    <Button
+        android:id="@+id/join_btn"
+        android:backgroundTint="#6AAFE6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이메일 회원가입하기" />
+
+</LinearLayout>
+
