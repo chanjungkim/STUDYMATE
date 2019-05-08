@@ -16,8 +16,8 @@
 
 ## 1. 로그인 & 회원가입
 * "회원목록" SharedPreference를 사용한 회원가입과 로그인
-<img src="https://user-images.githubusercontent.com/49344118/57312943-84601d00-7129-11e9-815d-6317eec78f22.gif" height="550">
-<img src="https://user-images.githubusercontent.com/49344118/57313180-ff293800-7129-11e9-86f4-ba7898d04c6e.gif" height="550">
+<p><img src="https://user-images.githubusercontent.com/49344118/57312943-84601d00-7129-11e9-815d-6317eec78f22.gif" height="550">
+<img src="https://user-images.githubusercontent.com/49344118/57313180-ff293800-7129-11e9-86f4-ba7898d04c6e.gif" height="550"></p>
 
 ## 2. 스터디모임 등록,수정,삭제 (모임장만 수정,삭제가능)
 ### 등록
