@@ -3,7 +3,7 @@
 내 주변 스터디 모임정보, 스터디 장소정보를 제공해주는 어플입니다.
 
 ## 사용 기술
-* 언어 : PHP, HTML
+* 언어 : PHP, JAVA
 * 운영체제 : Linux(Ubuntu)
 * 데이터베이스 : MySQL
 * 웹 서버 : Apache
